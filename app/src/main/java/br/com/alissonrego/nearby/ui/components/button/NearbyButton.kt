@@ -1,4 +1,4 @@
-package br.com.alissonrego.nearby.ui.components
+package br.com.alissonrego.nearby.ui.components.button
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Arrangement

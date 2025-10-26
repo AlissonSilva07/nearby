@@ -3,7 +3,7 @@ package br.com.alissonrego.nearby.data.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class MarketDetail(
+data class MarketDetails(
     val id: String,
     val categoryId: String,
     val name: String,

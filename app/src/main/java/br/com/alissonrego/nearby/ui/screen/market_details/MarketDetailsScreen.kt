@@ -1,4 +1,4 @@
-package br.com.alissonrego.nearby.ui.screen
+package br.com.alissonrego.nearby.ui.screen.market_details
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

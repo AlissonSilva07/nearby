@@ -20,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.alissonrego.nearby.data.mock.mockCategories
 import br.com.alissonrego.nearby.data.mock.mockMarkets
+import br.com.alissonrego.nearby.data.model.Market
 import br.com.alissonrego.nearby.ui.components.category.NearbyCategoryFilterChipList
 import br.com.alissonrego.nearby.ui.components.market.NearbyMarketCardList
 import br.com.alissonrego.nearby.ui.theme.Gray100
@@ -27,7 +28,7 @@ import com.google.maps.android.compose.GoogleMap
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier, onNavigateToMarketDetails: () -> Unit) {
+fun HomeScreen(modifier: Modifier = Modifier,  onNavigateToMarketDetails: (Market) -> Unit) {
     val bottomSheetState = rememberBottomSheetScaffoldState()
     var isBottomSheetOpened by remember { mutableStateOf(true) }
 
@@ -47,7 +48,7 @@ fun HomeScreen(modifier: Modifier = Modifier, onNavigateToMarketDetails: () -> U
                         .padding(16.dp),
                     markets = mockMarkets,
                     onMarketClick = { selectedMarket ->
-                        onNavigateToMarketDetails()
+                        onNavigateToMarketDetails(selectedMarket)
                     }
                 )
             },
